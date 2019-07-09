@@ -37,13 +37,13 @@ func ConvertGBFBattleInfo(msg string) (*BattleInfo, error) {
 	msg = strings.Replace(msg, "Lv", " ", -1)
 	strs := strings.Split(msg, " ")
 	strs = delete_empty(strs)
-	if len(strs) > 3 {
+	if len(strs) > 4 {
 		return nil, fmt.Errorf("%s result not match. %#v", msg, strs)
 	}
 	roomId := strs[0]
 	level := ""
 	mobName := ""
-	if len(strs) == 3 {
+	if len(strs) == 4 {
 		level = strs[1]
 		mobName = strs[2]
 	} else {
