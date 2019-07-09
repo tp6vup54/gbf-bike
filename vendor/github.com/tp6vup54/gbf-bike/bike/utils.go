@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	battleReg    = regexp.MustCompile(`\w{8} :参戦ID\n参加者募集！\nLv\d{2,3}`)
+	battleReg    = regexp.MustCompile(`\w{8} :参戦ID\n参加者募集！\n`)
 )
 
 type BattleInfo struct {
@@ -37,13 +37,22 @@ func ConvertGBFBattleInfo(msg string) (*BattleInfo, error) {
 	msg = strings.Replace(msg, "Lv", " ", -1)
 	strs := strings.Split(msg, " ")
 	strs = delete_empty(strs)
-	if len(strs) > 4 {
+	if len(strs) > 3 {
 		return nil, fmt.Errorf("%s result not match. %#v", msg, strs)
 	}
+	roomId := strs[0]
+	level := ""
+	mobName := ""
+	if len(strs) == 3 {
+		level = strs[1]
+		mobName = strs[2]
+	} else {
+		mobName = strs[1]
+	}
 	ret := &BattleInfo{
-		RoomId:  strs[0],
-		Level:   strs[1],
-		MobName: strs[2],
+		RoomId:  roomId,
+		Level:   level,
+		MobName: mobName,
 	}
 	return ret, nil
 }
