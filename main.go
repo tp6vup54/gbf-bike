@@ -4,8 +4,8 @@ import (
 	"os"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/eternnoir/gbf-bike/bike"
-	"github.com/eternnoir/gbf-bike/server"
+	"github.com/tp6vup54/gbf-bike/bike"
+	"github.com/tp6vup54/gbf-bike/server"
 	"github.com/urfave/cli"
 )
 
