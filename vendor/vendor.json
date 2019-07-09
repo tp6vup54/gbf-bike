@@ -133,13 +133,13 @@
 		{
 			"checksumSHA1": "/6YtyfIWYEUAkcl39/JZoGH2ERo=",
 			"path": "github.com/tp6vup54/gbf-bike/bike",
-			"revision": "f21f244c6883336508027f61be8beb01206e0622",
+			"revision": "0fbdf7d99e552ae8b15f9bdf54271a4ca4569ff9",
 			"revisionTime": "2019-07-09T15:20:39Z"
 		},
 		{
 			"checksumSHA1": "LC8SwrWhWs9YWHcHZxpAE018TNA=",
 			"path": "github.com/tp6vup54/gbf-bike/server",
-			"revision": "f21f244c6883336508027f61be8beb01206e0622",
+			"revision": "0fbdf7d99e552ae8b15f9bdf54271a4ca4569ff9",
 			"revisionTime": "2019-07-09T15:20:39Z"
 		},
 		{
