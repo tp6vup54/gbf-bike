@@ -26,7 +26,7 @@ func Start(c *cli.Context) error {
 		log.Warn("Use debug mode")
 		log.SetLevel(log.DebugLevel)
 	}
-	gb, err := bike.NewGbfBike(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
+	gb, err := bike.NewGbfBike(os.Getenv("ConsumerKey"), os.Getenv("ConsumerSecret"), os.Getenv("AccessToken"), os.Getenv("AccessTokenSecret"))
 	if err != nil {
 		return err
 	}
